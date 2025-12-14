@@ -40,16 +40,21 @@ subProcessのpythonファイルの仕様について
 
 使い方の手順（動作確認）
 
-・前提：Python３系がインストールされていること（3.13.1で動作確認）。
+・前提：Python3系がインストールされていること（3.13.1で動作確認）。
+
 ・必要パッケージ PySide6
+
 pip install PySide6 でインストールしてください.
 
 ・必要ファイル（同じフォルダに配置）
 EDTA_main.pyw
+
 parameter_table.py
+
 sub_print_csv.py（サンプルのサブプロセスを使う場合）
 
 ・動作確認用データ
+
 testdataフォルダ
 
 EDTA_main.pywをダブルクリックすると起動します。
