@@ -4,9 +4,9 @@
 拙い点とバグはご容赦ください。データはバックアップを取ってから使ってください。
 本プログラム作成では、AIエディタCursorに（初めのうちは）手伝ってもらいました。
 
-使い方はこちらも参照。
+使い方はこちらも参照(なぜかhtmlが表示できない)。
 
-https://github.com/Taro-cloud/EDTA-Data-Tag-Tool/tree/2ec01b538648a83355799750ee4bbf5846f2c312/intro_html
+https://github.com/Taro-cloud/EDTA-Data-Tag-Tool/blob/2ec01b538648a83355799750ee4bbf5846f2c312/intro_html/index.html
 
 データファイルの前提条件は以下のとおりです。
 
