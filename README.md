@@ -46,7 +46,7 @@ root pathにはマスターのjsonも生成します。これは"フォルダ条
 
 - データ長（列数）は可変でも良いが、可変にするとpandasのdataframeの読み込みで不都合があると思う。
 
-## 使い方の手順（動作確認）
+## 使い方（動作確認）
 
 - 前提：Python3系がインストールされていること（3.13.1で動作確認）。
 
@@ -65,5 +65,39 @@ pip install PySide6 でインストールしてください.
 ## 動作確認用データ
 
 testdata フォルダにあります。
+3フォルダあり、251114にはファイルまとめの対象外の*.noファイルがあります。
 
-EDTA_main.pywをダブルクリックすると起動します。
+![](gif/intro_html_ed31cebb.gif)
+
+##起動
+
+1. EDTA_main.pywをダブルクリックすると起動します。
+
+2. testdataフォルダで、"set root”を押下します。testdataフォルダを解析のrootにします。
+
+![](gif/intro_html_a00d85ab.png)
+
+3. testdataフォルダで、“new json”を押して今回のデータタグのjsonファイル名(**.json)をつけます。masterのファル名も聞かれるので、別の名前(++.json)をつけます。
+
+4. keyに条件名（装置名、電圧、温度など）、value listに取りうる値を",”区切りで入力します。valueで、comboboxでvalue listの値の中から値を選択します。root フォルダで設定した値は、以下のフォルダのデフォルトの値になります。
+   
+![](gif/intro_html_afcf2ba5.png)
+
+5.  ”save JSON”で保存します。
+		(すでに作成したaa.jsonとmas.json(master)もあるので、”load root JSON”で使う事もできます。)
+
+6. 以下のフォルダ251214などでもvalueの値を変更し、"save json”を押下します。デフォルト値を使うフォルダの場合、値の編集と"save json”は必要ありません。
+   
+7. データ処理対象から外したいフォルダは、”make no-analysis tag”を押せば、**.noファイルが生成されて、データ処理対象外になります。”delete no-analysis tag”を押せば、"**.no”は削除されます。
+    
+![](gif/intro_html_a796f9c6.png)
+
+8. "set sub*.py”でsub_print_csv.pyを指定します。これがそれぞれのフォルダで実行されるpythonファイルになります。skip header は1にします(sub_print_csv.pyのheaderは1行のため)。
+		ここでは不要ですが、単体動作は、run_sub_print.batを実行すると確認できます。
+
+9. “set result filename”でまとめcsvの名前をつけます。
+    
+10. “run sub *.py”を押下します。これでtestdata以下の全フォルダにsub_print_csv.pyが実行されます。
+		aa.jsonをそのまま使っていると、以下のcsvが生成されます。
+
+![](gif/intro_html_5d3a7876.gif)
