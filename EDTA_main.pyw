@@ -18,7 +18,7 @@ from parameter_table import ParameterTable
 class TagEditor(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("EDTA- Expeliment Data Tag Authoring")
+        self.setWindowTitle("EDTA- Expeliment Data Tagging and Analysis")
         self.setGeometry(100, 100, 1200, 800)
         
         # ファイルシステムモデルの初期化
